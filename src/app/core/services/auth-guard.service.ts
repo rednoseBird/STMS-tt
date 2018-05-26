@@ -12,6 +12,15 @@ export class AuthGuardService implements CanActivate {
   ) {}
 
   canActivate(): boolean {
-    return this.authService.checkAuthenticated();
+    return this.checkLogin();
+  }
+
+  checkLogin(): boolean {
+    if (this.authService.checkAuthenticated()) {
+      return true;
+    }
+
+    this.authService.redirect();
+    return false;
   }
 }
