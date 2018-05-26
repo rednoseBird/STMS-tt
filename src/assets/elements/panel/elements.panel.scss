@@ -1,0 +1,9 @@
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: rgba(1,1,1,0.5);
+  box-shadow: 0 0 20px rgba(1,1,1,0.4);
+  height: 10vh;
+  max-height: 50px;
+}

@@ -1,0 +1,70 @@
+<article class="container">
+  <nav class="panel">
+    <div (click)="logOff()" class="bttn">
+      <i class="material-icons">exit_to_app</i>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <h1>Welcome, Homer</h1>
+
+    <div class="card">
+      <div class="card-body">
+
+        <div class="card-image" [appDraggable]="activeUser.imagePosition">
+          <img src="{{activeUser.image}}"/>
+        </div>
+        <div class="card-header" [appDraggable]="activeUser.textPosition">
+          <h2>{{activeUser.firstName}} {{activeUser.lastName}}</h2>
+        </div>
+
+        <div class="card-content">
+          <div class="row">
+            <span>Nickname: </span>
+            <span class="blue-text">{{activeUser.username}}</span>
+          </div>
+          <div class="row">
+            <span>Age: </span>
+            <span class="blue-text">{{activeUser.age}}</span>
+          </div>
+          <div class="row">
+            <span>Hometown: </span>
+            <span class="blue-text">{{activeUser.hometown}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="card-box">-->
+    <!--<div class="card"-->
+         <!--[appDraggable]="activeUser.imagePosition">-->
+      <!--<div class="card-body">-->
+        <!--<div class="card-image">-->
+          <!--<img src="{{activeUser.image}}" />-->
+        <!--</div>-->
+
+        <!--<div class="card-header">-->
+          <!--<h2>{{activeUser.firstName}} {{activeUser.lastName}}</h2>-->
+        <!--</div>-->
+        <!--<div class="card-content">-->
+          <!--<div class="row">-->
+            <!--<span>Nickname: </span>-->
+            <!--<span class="blue-text">{{activeUser.username}}</span>-->
+          <!--</div>-->
+          <!--<div class="row">-->
+            <!--<span>Age: </span>-->
+            <!--<span class="blue-text">{{activeUser.age}}</span>-->
+          <!--</div>-->
+          <!--<div class="row">-->
+            <!--<span>Hometown: </span>-->
+            <!--<span class="blue-text">{{activeUser.hometown}}</span>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+</article>
+
+
+

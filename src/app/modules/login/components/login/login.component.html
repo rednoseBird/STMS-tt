@@ -1,0 +1,26 @@
+<article>
+  <div class="login-form">
+    <form class="form-group">
+      <div class="heading">Login</div>
+      <input [(ngModel)]="credentials.username"
+             class="input text-input"
+             name="username"
+             type="text"
+             placeholder="Username" />
+      <input [(ngModel)]="credentials.passwordHash"
+             class="input text-input"
+             name="passwordHash"
+             type="password"
+             placeholder="Password" />
+      <div class="error-message" *ngIf="validationMessage">
+        {{validationMessage}}
+      </div>
+      <button class="button"
+              (click)="checkLogin()">
+        Let me in.
+      </button>
+    </form>
+  </div>
+</article>
+
+<app-loader *ngIf="loadingState"></app-loader>
