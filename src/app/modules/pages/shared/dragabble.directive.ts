@@ -42,6 +42,7 @@ export class DraggableDirective implements OnInit {
     this.offset = {x: 0, y: 0};
     this.draggable = false;
   }
+
   @HostListener('dragstart', ['$event']) onDragStart(e) {
     e.preventDefault();
   }
